@@ -1,0 +1,135 @@
+/**
+ * This file is part of TGEI Semi Headless
+ * TGEI Semi Headless is licensed with GPLv2
+ * Copyright (C) 2024  Too Good Enterprises Inc.
+ */
+
+label.tgei-toggle{
+  position: relative;
+  height: 1.5rem;
+  font-size: 1rem;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+label.tgei-toggle div.status
+{
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+}
+
+label.tgei-toggle div.connector
+{
+  display: inline-block;
+  width: 3rem;
+  height: 0.5rem;
+  background-color: #BBBBBB;
+  position: relative;
+  top: -0.125rem;
+}
+
+label.tgei-toggle input[type="checkbox"]
+{
+  display: none;
+}
+
+label.tgei-toggle span
+{
+  position: absolute;
+  border-radius: 50%;
+  top: -0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-color: white;
+  margin-left: 0px;
+  background-color: blue;
+  display: block;
+  transition: .4s;
+  display: inline-block;
+}
+
+label.tgei-toggle div.block
+{
+  font-weight: bold;
+}
+
+label.tgei-toggle input:checked ~ div.connector span
+{
+  margin-left: 2rem;
+  transition: .4s;
+}
+
+label.tgei-toggle input:checked ~ div.block
+{
+  font-weight: normal;
+}
+
+label.tgei-toggle input:checked ~ div.allow
+{
+  font-weight: bold;
+}
+
+.tgei-admin-notice, #setting-error-settings_updated
+{
+  animation-name: tgei-fade-admin-notice;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes tgei-fade-admin-notice {
+  0%   {opacity: 100%;}
+  75%  {opacity: 100%;}
+  100% {opacity: 0%;}
+}
+
+.tgei-tooltip
+{
+  border-radius: 50%;
+  font-weight: 900;
+  color: white;
+  font-size: 1.1rem;
+  background-color: darkblue;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.tgei-tooltipText
+{
+  position: absolute;
+  visibility: hidden;
+  left: 2rem;
+  z-index: 2;
+  width: 300px;
+  background: rgba(0,0,0, 0.5);
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.tgei-tooltip .tgei-tooltipText::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent rgba(0,0,0,0.5) transparent transparent;
+}
+
+.tgei-tooltip:hover .tgei-tooltipText, .tgei-tooltip:focus .tgei-tooltipText, .tgei-tooltip:active .tgei-tooltipText
+{
+  visibility: visible;
+}
+
+

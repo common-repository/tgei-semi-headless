@@ -1,0 +1,23 @@
+body
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: none;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+main
+{
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: none;
+  align-items: center;
+  border: 20px dashed #44AAFF;
+  box-sizing: border-box;
+}

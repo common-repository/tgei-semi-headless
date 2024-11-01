@@ -1,0 +1,131 @@
+/**
+ * This file is part of TGEI Semi Headless
+ * TGEI Semi Headless is licensed with GPLv2
+ * Copyright (C) 2024  Too Good Enterprises Inc.
+ */
+
+.tgei-faq
+{
+  padding: 0;
+  list-style-type: none;
+}
+
+.tgei-faq input[type=checkbox]
+{
+  display: none;
+}
+
+.tgei-faq li
+{
+  width: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.tgei-faq li span
+{
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  background-color: #333333;
+  color: #eeeeee;
+  font-weight: bold;
+}
+
+.tgei-faq li span:before
+{
+  content: '+';
+  font-family: monospace;
+  margin-right: 10px;
+  margin-left: 3px;
+}
+
+.tgei-faq li:hover span
+{
+  color: #00ff00;
+}
+
+.tgei-faq li input[type=checkbox]:checked ~ span:before
+{
+  content: '-';
+}
+
+.tgei-faq li div
+{
+  display: none;
+}
+
+.tgei-faq li input[type=checkbox]:checked ~ div
+{
+  display: block;
+}
+
+.tgei-screenshot
+{
+  width: 300px;
+  height: auto;
+}
+
+.tgei-screenshot:hover
+{
+  cursor: pointer;
+  border: 2px solid #00ff00;
+}
+
+#tgei-shadowbox
+{
+  width: calc(100% + 20px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: -20px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+#tgei-shadowbox div
+{
+  position: relative;
+}
+
+#tgei-shadowbox div img
+{
+  /*
+  height: 70vh;
+  width: auto;
+  */
+  width: min(90vw, var(--width));
+  height: auto;
+  aspect-ratio: var(--width) / var(--height);
+}
+
+#tgei-shadowbox div .tgei-close
+{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  border: 1px solid red;
+  color: white;
+  background: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tgei-hide
+{
+  visibility: hidden;
+}
+
+.tgei-close:hover
+{
+  cursor: pointer;
+}
